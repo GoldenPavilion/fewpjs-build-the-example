@@ -9,15 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const hearts = document.querySelectorAll("span.like-glyph");
 
   for (const heart of hearts){
-    heart.addEventListener("click", () =>{
-      
+    heart.addEventListener("click", event =>{
+      mimicServerCall()
+      .then(() => {
+        if (heart.innerHTML == EMPTY_HEART){
+          heart.innerHTML = FULL_HEART
+          heart.className = "activated-heart"
+        } else {
+          heart.innerHTML = EMPTY_HEART
+          heart.className = "like-glyph"
+        }
+      })
     })
   }
 })
-
-
-
-
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
