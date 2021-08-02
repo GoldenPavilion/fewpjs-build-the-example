@@ -7,7 +7,10 @@ const modal = document.querySelector('#modal')
 document.addEventListener("DOMContentLoaded", () => {
   modal.hidden = true;
   const hearts = document.querySelectorAll("span.like-glyph");
+  clickHeart(hearts)
+})
 
+const clickHeart = (hearts) => {
   for (const heart of hearts){
     heart.addEventListener("click", event =>{
       mimicServerCall()
@@ -30,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   }
-})
+}
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
