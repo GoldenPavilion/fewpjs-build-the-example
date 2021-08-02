@@ -20,6 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
           heart.className = "like-glyph"
         }
       })
+      .catch((error) =>{
+        modal.hidden = false
+        const modalError = document.querySelector("#modal-message")
+        modalError.innerText = error
+        setTimeout(() =>{
+          modal.hidden = true
+        }, 5000)
+      })
     })
   }
 })
