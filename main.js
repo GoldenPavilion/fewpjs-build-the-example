@@ -2,7 +2,19 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-// Your JavaScript code goes here!
+const modal = document.querySelector('#modal')
+
+document.addEventListener("DOMContentLoaded", () => {
+  modal.hidden = true;
+  const hearts = document.querySelectorAll("span.like-glyph");
+
+  for (const heart of hearts){
+    heart.addEventListener("click", () =>{
+      
+    })
+  }
+})
+
 
 
 
